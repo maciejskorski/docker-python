@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     # Docker tags and credentials for DockerHub/GitHub Containers, customize!
     env:
-      IMAGE_NAME: kaggle-docker-modernized
+      IMAGE_NAME: kaggle-python-build
       IMAGE_VERSION: latest
       DOCKER_USER: ${{ secrets.DOCKER_USER }}
       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
@@ -18,9 +18,9 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build and tag the image
       run: |
-        docker build . \
-        --tag $DOCKER_USER/$IMAGE_NAME:$IMAGE_VERSION \
-        --tag ghcr.io/$GITHUB_USER/$IMAGE_NAME:$IMAGE_VERSION
+        ./build
+      #  --tag $DOCKER_USER/$IMAGE_NAME:$IMAGE_VERSION \
+      #  --tag ghcr.io/$GITHUB_USER/$IMAGE_NAME:$IMAGE_VERSION
     - name: Publish to DockerHub
       if: env.DOCKER_PASSWORD != ''
       run: |
