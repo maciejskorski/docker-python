@@ -19,8 +19,8 @@ jobs:
     - name: Build and tag the image
       run: |
         ./build
-      #  --tag $DOCKER_USER/$IMAGE_NAME:$IMAGE_VERSION \
-      #  --tag ghcr.io/$GITHUB_USER/$IMAGE_NAME:$IMAGE_VERSION
+        docker tag kaggle/python-build $DOCKER_USER/$IMAGE_NAME:$IMAGE_VERSION
+        docker tag kaggle/python-build ghcr.io/$GITHUB_USER/$IMAGE_NAME:$IMAGE_VERSION
     - name: Publish to DockerHub
       if: env.DOCKER_PASSWORD != ''
       run: |
