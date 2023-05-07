@@ -15,7 +15,7 @@ EOF
 CACHE_FLAG='--no-cache'
 DOCKERFILE='Dockerfile'
 ACCELERATOR='none'
-IMAGE_TAG='maciejskorski/kaggle-python-build'
+IMAGE_TAG='kaggle/python-build'
 BUILD_ARGS=''
 
 while :; do
