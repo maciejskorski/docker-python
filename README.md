@@ -1,3 +1,5 @@
+![Build and Publish Docker](https://github.com/maciejskorski/docker-python/actions/workflows/build-publish-image.yaml/badge.svg)
+
 # docker-python
 
 [Kaggle Notebooks](https://www.kaggle.com/notebooks) allow users to run a Python Notebook in the cloud against our competitions and datasets without having to download data or set up their environment.
