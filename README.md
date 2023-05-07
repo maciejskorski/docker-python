@@ -1,4 +1,4 @@
-![Build and Publish Docker](https://github.com/maciejskorski/docker-python/actions/workflows/build-publish-image.yaml/badge.svg)
+![Build and Publish Docker](https://github.com/maciejskorski/docker-python/actions/workflows/build-publish-image.yaml/badge.svg?branch=modernized-jupyterserver)
 
 # docker-python
 
